@@ -1,0 +1,868 @@
+/* Page wrapper */
+.work-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 24px 40px;
+  font-family:
+    "Inter",
+    "Segoe UI",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+
+/* Header */
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 20px 0;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.work-header h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Add button */
+.add-task-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-task-btn:hover {
+  background: #2563eb;
+}
+
+.add-task-btn:active {
+  background: #1d4ed8;
+}
+
+/* Generate Report button */
+.generate-report-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.generate-report-btn:hover {
+  background: #2563eb;
+}
+
+.generate-report-btn:active {
+  background: #1d4ed8;
+}
+
+/* View Reports button */
+.view-reports-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.view-reports-btn:hover {
+  background: #2563eb;
+}
+
+.view-reports-btn:active {
+  background: #1d4ed8;
+}
+
+/* Search bar */
+.search-bar {
+  margin-bottom: 16px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+  background: white;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Tabs */
+.tabs-container {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tab {
+  padding: 10px 24px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: #6b7280;
+  margin-bottom: -2px;
+}
+
+.tab:hover {
+  color: #374151;
+  background: #f9fafb;
+}
+
+.tab.active {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+}
+
+/* List */
+.todo-list {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Todo Card */
+.todo-card {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.todo-card:last-child {
+  border-bottom: none;
+}
+
+.todo-card:hover {
+  background: #f9fafb;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.todo-card strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.todo-badges {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.badge-feature {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-bug {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-refactor {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-learning {
+  background: #e9d5ff;
+  color: #6b21a8;
+}
+
+.badge-ops {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-project {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.todo-card ul {
+  margin: 4px 0;
+  padding-left: 20px;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.todo-card ul li {
+  margin: 2px 0;
+  line-height: 1.4;
+}
+
+.todo-card textarea {
+  width: 100%;
+  min-height: 70px;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.todo-card textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.todo-card button {
+  align-self: flex-start;
+  padding: 6px 14px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.todo-card button:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.todo-card button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.todo-card.completed {
+  background: #f0f9ff;
+  border-left: 3px solid #3b82f6;
+}
+
+.todo-card.completed strong {
+  color: #1e40af;
+}
+
+.todo-card span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3b82f6;
+  display: none;
+}
+
+/* Row (legacy support) */
+.todo-row {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.todo-row:last-child {
+  border-bottom: none;
+}
+
+.todo-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.todo-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Completed */
+.todo-row.completed {
+  background: #f0f9ff;
+  color: #6b7280;
+}
+
+/* Drawer */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 50;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.drawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 420px;
+  background: white;
+  padding: 24px;
+  z-index: 60;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: slideIn 0.3s ease;
+  overflow-y: auto;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawer h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  flex-shrink: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.drawer-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  transition: color 0.2s ease;
+  margin: 0;
+}
+
+.drawer-close:hover {
+  color: #111827;
+}
+
+.drawer input,
+.drawer textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.drawer select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+  flex-shrink: 0;
+  background: white;
+  cursor: pointer;
+}
+
+.drawer textarea {
+  min-height: 120px;
+  max-height: 300px;
+  resize: vertical;
+}
+
+.drawer input:focus,
+.drawer textarea:focus,
+.drawer select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.drawer-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+
+.drawer-buttons button {
+  flex: 1;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.drawer-buttons .cancel-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.drawer-buttons .cancel-btn:hover {
+  background: #e5e7eb;
+}
+
+/* Bullets Section */
+.bullets-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bullets-section label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.bullets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bullet-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.bullet-item input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+}
+
+.bullet-item input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.remove-bullet-btn {
+  background: #fee2e2;
+  color: #991b1b;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.remove-bullet-btn:hover {
+  background: #fecaca;
+}
+
+.add-bullet-btn {
+  align-self: flex-start;
+  padding: 6px 12px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-bullet-btn:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* Work notes section in todo card */
+.work-notes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* Reports List Drawer */
+.reports-list-drawer {
+  width: 700px;
+}
+
+.reports-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.report-item {
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.report-item:hover {
+  border-color: #3b82f6;
+  background: white;
+}
+
+.report-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.report-item-header strong {
+  font-size: 1rem;
+  color: #111827;
+}
+
+.report-task-count {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.report-item-dates {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.report-item-meta {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.report-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.view-btn,
+.delete-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.view-btn:hover {
+  background: #2563eb;
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+.report-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.back-btn {
+  align-self: flex-start;
+  padding: 6px 14px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #e5e7eb;
+}
+
+.report-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.report-detail-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.report-detail-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.loading-state,
+.empty-state-drawer {
+  padding: 40px 20px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+/* Report Drawer specific styles */
+.report-drawer {
+  width: 550px;
+}
+
+.date-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.date-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.date-field label {
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.date-field input[type="date"] {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.date-field input[type="date"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.generate-btn {
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.generate-btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.generate-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.report-output {
+  margin-top: 12px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.report-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.copy-btn {
+  padding: 6px 14px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: #2563eb;
+}
+
+.report-output pre {
+  margin: 0;
+  font-family: "SF Mono", "Monaco", "Cascadia Code", "Consolas", monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #374151;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Empty state */
+.empty-state {
+  padding: 60px 20px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination-buttons button {
+  padding: 8px 16px;
+  background: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.pagination-buttons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination-buttons button.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}

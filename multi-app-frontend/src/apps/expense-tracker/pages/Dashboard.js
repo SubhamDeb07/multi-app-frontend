@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../../../core/api";
+import { Link } from "react-router-dom";
+import "../css/Dashboard.css";
 
 const Dashboard = () => {
   const [expenses, setExpenses] = useState([]);
@@ -49,10 +51,13 @@ const Dashboard = () => {
       setError("Failed to add expense");
     }
   };
-const total = expenses.reduce((sum, e) => sum + parseFloat(e.amount), 0);
+  const total = expenses.reduce((sum, e) => sum + parseFloat(e.amount), 0);
 
   return (
     <div className="container">
+      <div className="back-button">
+        <Link to="/apps">← Back to Home</Link>
+      </div>
       <h2>Dashboard</h2>
 
       {/* ✅ Add Expense Form */}

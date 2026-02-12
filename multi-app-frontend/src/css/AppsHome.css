@@ -1,52 +1,115 @@
 /* AppsHome.css */
 
 .apps-container {
-    padding: 50px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #fff9e6, #ffe8b3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.apps-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2d2d2d;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Grid Layout */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10px;
+}
+
+/* Card Style */
+.app-card {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.app-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Link inside card */
+.app-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   .apps-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-size: 1.6rem;
   }
-  
-  .apps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    width: 100%;
-    max-width: 1000px;
-  }
-  
+
   .app-card {
-    background: #ffffffcc; /* semi-transparent white for gradient effect */
-    padding: 30px 20px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #333;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    padding: 20px 25px;
+    font-size: 1rem;
   }
-  
-  .app-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 480px) {
+  .apps-grid {
+    gap: 15px;
   }
-  
-  .app-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+
+  .app-card {
+    padding: 18px 20px;
+    font-size: 0.95rem;
   }
-  
-  
+}
+
+.apps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;         /* span full page */
+  padding: 0 40px;     /* space on left/right */
+  box-sizing: border-box;
+}
+
+.apps-header h1 {
+  margin: 0;
+}
+
+.logout-btn {
+  margin-left: auto;   /* push button to extreme right */
+}
+
+
+.logout-btn {
+  padding: 8px 16px;
+  background: #2563eb; /* blue */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #1e40af; /* darker blue */
+  transform: scale(1.05);
+}

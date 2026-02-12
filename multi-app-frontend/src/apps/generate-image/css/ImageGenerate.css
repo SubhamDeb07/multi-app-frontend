@@ -1,0 +1,155 @@
+/* --- Container --- */
+.image-creator {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* --- Title --- */
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1e293b; /* Dark Slate */
+  margin-bottom: 20px;
+}
+
+/* --- Chat Container --- */
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 600px;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* --- Chat Bubble --- */
+.chat-bubble {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* --- Prompt Text --- */
+.prompt-text {
+  font-size: 14px;
+  color: #1e293b; /* Dark Slate */
+  margin: 0;
+}
+
+/* --- Image --- */
+.chat-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* --- Input Container --- */
+.input-container {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Input Form --- */
+.prompt-input {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 12px;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Input Field --- */
+.prompt-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #1e293b; /* Dark Slate */
+}
+
+/* --- Button --- */
+.prompt-input button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb; /* Modern Blue */
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.prompt-input button:hover {
+  background: #1e40af; /* Darker Blue */
+}
+
+/* --- Scrollbar Styling --- */
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* --- Back Button --- */
+.back-button3 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.back-button3 a {
+  text-decoration: none;
+  color: #fff;
+  background: #2563eb; /* Modern Blue */
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button3 a:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}

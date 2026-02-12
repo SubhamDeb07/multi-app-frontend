@@ -18,11 +18,11 @@
   }
   
   .auth-card input:focus {
-    border-color: #ffb400;
+    border-color: #2563eb;;
   }
   
   .auth-card button {
-    background: #ffb400;
+    background: #2563eb;;
     color: #fff;
     padding: 12px;
     border: none;
@@ -33,7 +33,7 @@
   }
   
   .auth-card button:hover {
-    background: #e09e00;
+    background: #2563eb;;
   }
   
   .error-message {
@@ -62,7 +62,7 @@
   }
   
   .password-wrapper input:focus {
-    border-color: #ffb400;
+    border-color: #2563eb;
   }
   
   /* Eye icon inside input */

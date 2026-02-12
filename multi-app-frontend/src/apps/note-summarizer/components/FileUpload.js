@@ -1,8 +1,7 @@
-// src/apps/note-summarizer/components/FileUpload.js
 import React, { useState } from "react";
-import API from "../../../core/api"; // ✅ same as in expense tracker
+import API from "../../../core/api"; 
 
-export default function FileUpload({ onSummary }) {
+export default function FileUpload({ onUploaded }) {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -18,10 +17,11 @@ export default function FileUpload({ onSummary }) {
 
     setLoading(true);
     try {
-      const res = await API.post("/summarizer/file", formData, {
+      await API.post("/summarizer/file", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      onSummary(res.data.summary);
+
+      if (onUploaded) onUploaded(); // refresh summaries
     } catch (error) {
       console.error(error);
       alert("Error summarizing file");
@@ -31,10 +31,22 @@ export default function FileUpload({ onSummary }) {
   };
 
   return (
-    <div>
-      <input type="file" onChange={handleFileChange} />
+    <div className="file-upload">
+      {/* Hidden input */}
+      <input
+        id="fileInput"
+        type="file"
+        onChange={handleFileChange}
+        className="file-input"
+      />
+
+      {/* Custom styled label */}
+      <label htmlFor="fileInput" className="file-label">
+        {file ? file.name : "Choose File"}
+      </label>
+
       <button onClick={handleUpload} disabled={loading}>
-        {loading ? "Summarizing..." : "Upload & Summarize"}
+        {loading ? "Uploading..." : "Upload & Process"}
       </button>
     </div>
   );
